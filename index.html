@@ -1,0 +1,692 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Hedef Isı Mühendislik, Trabzon Daikin bayisi</title>
+  <meta name="description" content="Trabzon Toklu’da resmi Daikin bayisi. Klima, kombi, VRV, ısı pompası ve komple mekanik tesisat; 21 referans proje, ücretsiz keşif, kapasite hesabı ve bakım planları.">
+  <meta name="theme-color" content="#f4f5f5">
+  <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="favicon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preload" href="fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/site.css">
+  <script src="js/early.js"></script>
+</head>
+<body>
+  <div role="note" style="background:#1d2b36;color:#f4f5f5;font:600 13px/1.4 system-ui,sans-serif;text-align:center;padding:8px 16px;letter-spacing:.01em">Önizleme · Hedef Isı Mühendislik için hazırlanan site, henüz yayında değildir</div>
+  <a class="skip" href="#projeler">Referans projelere geç</a>
+
+  <header class="bar wrap">
+    <a class="brand" href="#top"><img src="img/logo-hedefisi.webp" width="440" height="132" alt="Hedef Isı Mühendislik, sayfa başı" fetchpriority="high"></a>
+    <nav class="bar__nav" aria-label="Ana menü">
+      <ul role="list">
+        <li class="only-wide"><a class="link" href="#projeler">Projeler</a></li>
+        <li class="only-wide"><a class="link" href="#hesap">Hesapla</a></li>
+        <li class="only-wide"><a class="link" href="#hizmetler">Hizmetler</a></li>
+        <li class="only-wide"><a class="link" href="#bakim">Bakım</a></li>
+        <li class="only-xl"><a class="link bar__tel" href="tel:+904622301599">0462 230 15 99</a></li>
+        <li class="only-narrow"><a class="link" href="tel:+904622301599">Ara</a></li>
+      </ul>
+      <a class="button button--small button--ink only-wide" href="#kesif">Ücretsiz keşif iste</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- HERO: the set-point dial. The name means "target"; on a thermostat the target is the set temperature.
+         When live, the stage pins and scrolling turns the dial from cold to the target while the air
+         (WebGL, js/air-gl.js) changes from falling cold air to rising warm air. -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__stage">
+      <div class="hero__text wrap">
+        <h1 id="hero-title" class="display" data-rise style="--i:0">Hedef Isı<br> Mühendislik</h1>
+        <p class="hero__lead" data-rise style="--i:1">Trabzon’da resmi Daikin bayisi. Klima, kombi, VRV ve ısı pompasında keşiften montaja, montajdan bakıma kadar.</p>
+        <div class="hero__actions" data-rise style="--i:2">
+          <a class="button" href="#kesif">Ücretsiz keşif iste</a>
+          <a class="link-plain" href="#projeler">21 referans projemize bakın</a>
+        </div>
+        <p class="hero__where">Toklu’da, sahil yolu üzerinde, Panagia Otel’in yanı. <a class="link-plain" href="tel:+904622301599">0462 230 15 99</a></p>
+      </div>
+      <div class="dial" aria-hidden="true">
+        <div class="dial__pair"></div>
+        <div class="dial__main">
+          <div class="dial__marker"><span></span></div>
+          <p class="dial__read">
+            <span class="dial__temp" data-dial-temp></span>
+            <span class="dial__label">Hedef sıcaklık</span>
+            <span class="dial__mode" data-dial-mode>Isıtma</span>
+            <span class="dial__cue"><svg viewBox="0 0 12 16" aria-hidden="true"><path d="M6 1v13M1.5 9.5 6 14l4.5-4.5"/></svg><span class="cue-heat">Kaydırın, oda ısınsın</span><span class="cue-cool">Kaydırın, oda serinlesin</span></span>
+          </p>
+        </div>
+      </div>
+      <button type="button" class="hero__pause link-plain" aria-pressed="false" hidden>Hareketi durdur</button>
+      </div>
+    </section>
+
+    <!-- TRUST: verified facts only (no ratings). The project count is the real length of the list below. -->
+    <section class="trust" aria-labelledby="trust-title" data-dock-start>
+      <h2 id="trust-title" class="sr-only">Kısaca Hedef Isı</h2>
+      <ul role="list" class="trust__list wrap">
+        <li class="trust__item"><span class="trust__dot trust__dot--cold" aria-hidden="true"></span><p><strong>Daikin VRV PRO ve UPG Premium bayisi</strong><span>Daikin’in Trabzon bayi listesinde kayıtlı</span></p></li>
+        <li class="trust__item"><span class="trust__dot trust__dot--heat" aria-hidden="true"></span><p><strong>2000’den beri</strong><span>ısıtma, soğutma ve mekanik tesisatta</span></p></li>
+        <li class="trust__item"><span class="trust__dot trust__dot--paper" aria-hidden="true"></span><p><strong><a class="trust__link" href="#projeler">21 referans proje</a></strong><span>otel, üniversite, AVM ve konut; dört ilde</span></p></li>
+        <li class="trust__item"><span class="trust__dot trust__dot--cold" aria-hidden="true"></span><p><strong>Ücretsiz keşif</strong><span>ölçü, cihaz yeri ve teklif yerinde</span></p></li>
+      </ul>
+    </section>
+
+    <!-- PROOF: Hedef Isı's own reference catalogue (9 Nov). One sticky label per group, an editorial bento of
+         real buildings beside it. Filtering shows one group; every group stays visible without script. -->
+    <!-- the references stylesheet loads here, in the body: it only blocks what follows, never the first screen -->
+    <link rel="stylesheet" href="css/refs.css">
+    <section id="projeler" class="refs" aria-labelledby="refs-title">
+      <div class="refs__inner wrap">
+        <div class="refs__head">
+          <h2 id="refs-title" class="head" data-reveal>Referans projelerimiz</h2>
+          <p class="refs__lead" data-reveal style="--i:1">Otelden üniversite yerleşkesine, AVM’den villaya: komple mekanik tesisatını ya da VRV klima sistemini üstlendiğimiz işler.</p>
+          <p class="refs__count" data-reveal style="--i:2"><span class="refs__num">21</span><span class="refs__where">proje, dört ilde: Trabzon, Rize, İstanbul ve Edirne</span></p>
+        </div>
+        <div class="refs__filter js-only" role="group" aria-label="Projeleri türe göre süz">
+          <button type="button" class="chip" data-filter="hepsi" aria-pressed="true">Hepsi <span class="chip__n">21</span></button>
+          <button type="button" class="chip" data-filter="otel" aria-pressed="false">Otel <span class="chip__n">5</span></button>
+          <button type="button" class="chip" data-filter="egitim" aria-pressed="false">Eğitim ve kamu <span class="chip__n">9</span></button>
+          <button type="button" class="chip" data-filter="ticari" aria-pressed="false">Ticari <span class="chip__n">3</span></button>
+          <button type="button" class="chip" data-filter="konut" aria-pressed="false">Konut <span class="chip__n">4</span></button>
+        </div>
+        <p class="sr-only" role="status" aria-atomic="true" data-refs-status></p>
+        <div class="rgroup" data-reveal data-group="otel" data-count="5">
+          <div class="rhead">
+            <h3 class="rhead__title">Otel</h3>
+            <p class="rhead__n">5 proje</p>
+            <p class="rhead__text">Trabzon’da beş otel: Holiday Inn, Marriott, Park Inn by Radisson, Aselia ve Cephanelik.</p>
+            <a class="rhead__ask" href="https://wa.me/905326067945?text=Merhaba%2C%20web%20sitenizdeki%20referans%20projelerinize%20bakt%C4%B1m.%20Benzer%20bir%20otel%20projesi%20i%C3%A7in%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum.">Benzer bir iş için WhatsApp’tan yazın</a>
+          </div>
+          <ul role="list" class="rgrid">
+            <li class="ref ref--xl" style="--span:5; --fx:28% 50%" data-count="1">
+              <figure class="ref__pic"><img src="img/ref-holiday-inn-1024.webp" srcset="img/ref-holiday-inn-640.webp 640w, img/ref-holiday-inn-1024.webp 1024w" sizes="(min-width: 64em) 56vw, (min-width: 48em) calc(100vw - 4rem), calc(100vw - 2rem)" width="1024" height="696" alt="Holiday Inn Trabzon binası, gece, ışıklı tabelasıyla" loading="lazy" decoding="async"></figure>
+              <div class="ref__body"><h4 class="ref__name">Holiday Inn Trabzon</h4><p class="ref__meta">Trabzon · Otel</p><p class="ref__scope">Komple mekanik tesisatlar, VRV klima sistemleri, sıhhi tesisatlar, yangın tesisatları, havalandırma tesisatları, doğalgaz tesisatları</p></div>
+            </li>
+            <li class="ref ref--xl" style="--span:4; --fx:74% 50%" data-count="1">
+              <figure class="ref__pic"><img src="img/ref-marriott-1024.webp" srcset="img/ref-marriott-640.webp 640w, img/ref-marriott-1024.webp 1024w" sizes="(min-width: 64em) 56vw, (min-width: 48em) calc(100vw - 4rem), calc(100vw - 2rem)" width="1024" height="739" alt="Trabzon’daki Marriott otel binaları" loading="lazy" decoding="async"></figure>
+              <div class="ref__body"><h4 class="ref__name">Marriott Otel</h4><p class="ref__meta">Trabzon · Otel</p><p class="ref__scope">VRV klima sistemleri</p></div>
+            </li>
+            <li class="ref ref--s" style="--span:3" data-count="1">
+              <figure class="ref__pic"><img src="img/ref-park-inn-1024.webp" srcset="img/ref-park-inn-640.webp 640w, img/ref-park-inn-1024.webp 1024w" sizes="(min-width: 64em) 21vw, (min-width: 48em) 46vw, 40vw" width="1024" height="681" alt="Park Inn by Radisson otel binası, iki açıdan" loading="lazy" decoding="async"></figure>
+              <div class="ref__body"><h4 class="ref__name">Park Inn by Radisson</h4><p class="ref__meta">Trabzon · Otel</p><p class="ref__scope">Komple mekanik tesisatlar, VRV klima sistemleri, sıhhi tesisatlar, yangın tesisatları, havalandırma tesisatları</p></div>
+            </li>
+            <li class="ref ref--s" style="--span:3" data-count="1">
+              <figure class="ref__pic"><img src="img/ref-aselia-1024.webp" srcset="img/ref-aselia-640.webp 640w, img/ref-aselia-1024.webp 1024w" sizes="(min-width: 64em) 21vw, (min-width: 48em) 46vw, 40vw" width="1024" height="746" alt="Aselia Otel binası ve önündeki palmiye" loading="lazy" decoding="async"></figure>
+              <div class="ref__body"><h4 class="ref__name">Aselia Otel</h4><p class="ref__meta">Trabzon · Otel</p><p class="ref__scope">VRV klima sistemleri</p></div>
+            </li>
+            <li class="ref ref--s" style="--span:3; --fx:50% 60%" data-count="1">
+              <figure class="ref__pic"><img src="img/ref-cephanelik-1024.webp" srcset="img/ref-cephanelik-640.webp 640w, img/ref-cephanelik-1024.webp 1024w" sizes="(min-width: 64em) 21vw, (min-width: 48em) 46vw, 40vw" width="1024" height="820" alt="Cephanelik Otel ve Restaurant, yamaçta, havadan" loading="lazy" decoding="async"></figure>
+              <div class="ref__body"><h4 class="ref__name">Cephanelik Otel & Restaurant</h4><p class="ref__meta">Trabzon · Otel ve restoran</p><p class="ref__scope">VRV klima sistemleri</p></div>
+            </li>
+          </ul>
+        </div>
+        <div class="rgroup" data-reveal data-group="egitim" data-count="9">
+          <div class="rhead">
+            <h3 class="rhead__title">Eğitim ve kamu</h3>
+            <p class="rhead__n">9 proje</p>
+            <p class="rhead__text">Avrasya Üniversitesi’nin dört yerleşkesi, RTE Üniversitesi’nde iki bina, Sürmene Bilim Merkezi, Akçaabat Spor Lisesi ve Keşan İlçe Emniyet Müdürlüğü.</p>
+            <a class="rhead__ask" href="https://wa.me/905326067945?text=Merhaba%2C%20web%20sitenizdeki%20referans%20projelerinize%20bakt%C4%B1m.%20Benzer%20bir%20okul%20ya%20da%20kamu%20binas%C4%B1%20projesi%20i%C3%A7in%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum.">Benzer bir iş için WhatsApp’tan yazın</a>
+          </div>
+          <ul role="list" class="rgrid">
+            <li class="ref ref--xl" style="--span:9; --fx:50% 62%" data-count="1">
+              <figure class="ref__pic"><img src="img/ref-avrasya-erdogan-bayraktar-1024.webp" srcset="img/ref-avrasya-erdogan-bayraktar-640.webp 640w, img/ref-avrasya-erdogan-bayraktar-1024.webp 1024w" sizes="(min-width: 64em) 56vw, (min-width: 48em) calc(100vw - 4rem), calc(100vw - 2rem)" width="1024" height="693" alt="Avrasya Üniversitesi Erdoğan Bayraktar Yerleşkesi’nin girişi ve cam cepheli binası" loading="lazy" decoding="async"></figure>
+              <div class="ref__body"><h4 class="ref__name">Avrasya Üniversitesi</h4><p class="ref__sub">Erdoğan Bayraktar Yerleşkesi</p><p class="ref__meta">Trabzon · Üniversite kampüsü</p><p class="ref__scope">Komple mekanik tesisatlar</p></div>
+            </li>
+            <li class="ref ref--l" style="--span:5" data-count="1">
+              <figure class="ref__pic"><img src="img/ref-avrasya-yalincak-1024.webp" srcset="img/ref-avrasya-yalincak-640.webp 640w, img/ref-avrasya-yalincak-1024.webp 1024w" sizes="(min-width: 64em) 34vw, (min-width: 48em) 46vw, 40vw" width="1024" height="676" alt="Avrasya Üniversitesi Yalıncak Yerleşkesi, deniz kıyısında, havadan" loading="lazy" decoding="async"></figure>
+              <div class="ref__body"><h4 class="ref__name">Avrasya Üniversitesi</h4><p class="ref__sub">Yalıncak Yerleşkesi</p><p class="ref__meta">Trabzon · Üniversite kampüsü</p><p class="ref__scope">Komple mekanik tesisatlar, VRV klima sistemleri, sıhhi tesisatlar, yangın tesisatları, havalandırma tesisatları, doğalgaz tesisatları</p></div>
+            </li>
+            <li class="ref ref--l" style="--span:4" data-count="1">
+              <figure class="ref__pic"><img src="img/ref-avrasya-pelitli-1024.webp" srcset="img/ref-avrasya-pelitli-640.webp 640w, img/ref-avrasya-pelitli-1024.webp 1024w" sizes="(min-width: 64em) 34vw, (min-width: 48em) 46vw, 40vw" width="1024" height="751" alt="Avrasya Üniversitesi Pelitli Yerleşkesi binası" loading="lazy" decoding="async"></figure>
+              <div class="ref__body"><h4 class="ref__name">Avrasya Üniversitesi</h4><p class="ref__sub">Pelitli Yerleşkesi</p><p class="ref__meta">Trabzon · Üniversite kampüsü</p><p class="ref__scope">Komple mekanik tesisatlar, VRV klima sistemleri, sıhhi tesisatlar, yangın tesisatları, havalandırma tesisatları, doğalgaz tesisatları</p></div>
+            </li>
+            <li class="ref ref--s" style="--span:3" data-count="1">
+              <figure class="ref__pic"><img src="img/ref-avrasya-yomra-1024.webp" srcset="img/ref-avrasya-yomra-640.webp 640w, img/ref-avrasya-yomra-1024.webp 1024w" sizes="(min-width: 64em) 21vw, (min-width: 48em) 46vw, 40vw" width="1024" height="677" alt="Avrasya Üniversitesi Yomra Yerleşkesi binaları, havadan" loading="lazy" decoding="async"></figure>
+              <div class="ref__body"><h4 class="ref__name">Avrasya Üniversitesi</h4><p class="ref__sub">Yomra Yerleşkesi</p><p class="ref__meta">Trabzon · Üniversite kampüsü</p><p class="ref__scope">Komple mekanik tesisatlar, VRV klima sistemleri, sıhhi tesisatlar, yangın tesisatları, havalandırma tesisatları, havuz sistemleri</p></div>
+            </li>
+            <li class="ref ref--s" style="--span:3" data-count="1">
+              <figure class="ref__pic"><img src="img/ref-surmene-bilim-1024.webp" srcset="img/ref-surmene-bilim-640.webp 640w, img/ref-surmene-bilim-1024.webp 1024w" sizes="(min-width: 64em) 21vw, (min-width: 48em) 46vw, 40vw" width="1024" height="676" alt="Sürmene Bilim Merkezi’nin girişi" loading="lazy" decoding="async"></figure>
+              <div class="ref__body"><h4 class="ref__name">Sürmene Bilim Merkezi</h4><p class="ref__sub">Selçuk Bayraktar Bilim Merkezi</p><p class="ref__meta">Trabzon · Kamu</p><p class="ref__scope">Komple mekanik tesisatlar, VRV klima sistemleri, sıhhi tesisatlar, yangın tesisatları, havalandırma tesisatları</p></div>
+            </li>
+            <li class="ref ref--s" style="--span:3" data-count="1">
+              <figure class="ref__pic"><img src="img/ref-rteu-1024.webp" srcset="img/ref-rteu-640.webp 640w, img/ref-rteu-1024.webp 1024w" sizes="(min-width: 64em) 21vw, (min-width: 48em) 46vw, 40vw" width="1024" height="699" alt="Recep Tayyip Erdoğan Üniversitesi binası, Rize" loading="lazy" decoding="async"></figure>
+              <div class="ref__body"><h4 class="ref__name">RTE Üniversitesi</h4><p class="ref__sub">Kongre ve Kültür Merkezi</p><p class="ref__meta">Rize · Üniversite kampüsü</p><p class="ref__scope">VRV klima sistemleri</p></div>
+            </li>
+            <li class="ref ref--s" style="--span:3" data-count="1">
+              <figure class="ref__pic"><img src="img/ref-rteu-su-505.webp" sizes="(min-width: 64em) 21vw, (min-width: 48em) 46vw, 40vw" width="505" height="337" alt="RTE Üniversitesi Su Ürünleri Fakültesi’nin girişi, Rize" loading="lazy" decoding="async"></figure>
+              <div class="ref__body"><h4 class="ref__name">RTE Üniversitesi</h4><p class="ref__sub">Su Ürünleri Laboratuvarı ve Fındıklı Yüksekokulu</p><p class="ref__meta">Rize · Üniversite kampüsü</p><p class="ref__scope">VRV klima sistemleri</p></div>
+            </li>
+            <li class="ref ref--s" style="--span:3" data-count="1">
+              <figure class="ref__pic"><img src="img/ref-akcaabat-spor-lisesi-1024.webp" srcset="img/ref-akcaabat-spor-lisesi-640.webp 640w, img/ref-akcaabat-spor-lisesi-1024.webp 1024w" sizes="(min-width: 64em) 21vw, (min-width: 48em) 46vw, 40vw" width="1024" height="750" alt="Akçaabat Spor Lisesi binaları ve stadyumu, havadan" loading="lazy" decoding="async"></figure>
+              <div class="ref__body"><h4 class="ref__name">Akçaabat Spor Lisesi</h4><p class="ref__meta">Trabzon · Eğitim yapısı</p><p class="ref__scope">Komple mekanik tesisatlar, sıhhi tesisatlar, yangın tesisatları, havalandırma tesisatları, doğalgaz tesisatları</p></div>
+            </li>
+            <li class="ref ref--s" style="--span:3" data-count="1">
+              <figure class="ref__pic"><img src="img/ref-kesan-emniyet-1024.webp" srcset="img/ref-kesan-emniyet-640.webp 640w, img/ref-kesan-emniyet-1024.webp 1024w" sizes="(min-width: 64em) 21vw, (min-width: 48em) 46vw, 40vw" width="1024" height="752" alt="Keşan İlçe Emniyet Müdürlüğü binası" loading="lazy" decoding="async"></figure>
+              <div class="ref__body"><h4 class="ref__name">Keşan İlçe Emniyet Müdürlüğü Binası</h4><p class="ref__meta">Edirne · Kamu binası</p><p class="ref__scope">VRV klima sistemleri</p></div>
+            </li>
+          </ul>
+        </div>
+        <div class="rgroup" data-reveal data-group="ticari" data-count="3">
+          <div class="rhead">
+            <h3 class="rhead__title">Ticari</h3>
+            <p class="rhead__n">3 proje</p>
+            <p class="rhead__text">Forum AVM Trabzon, Sabırlar İş Merkezi ve BYD showroomu.</p>
+            <a class="rhead__ask" href="https://wa.me/905326067945?text=Merhaba%2C%20web%20sitenizdeki%20referans%20projelerinize%20bakt%C4%B1m.%20Benzer%20bir%20ticari%20bina%20projesi%20i%C3%A7in%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum.">Benzer bir iş için WhatsApp’tan yazın</a>
+          </div>
+          <ul role="list" class="rgrid">
+            <li class="ref ref--xl" style="--span:9; --fx:50% 55%" data-count="1">
+              <figure class="ref__pic"><img src="img/ref-forum-1024.webp" srcset="img/ref-forum-640.webp 640w, img/ref-forum-1024.webp 1024w" sizes="(min-width: 64em) 56vw, (min-width: 48em) calc(100vw - 4rem), calc(100vw - 2rem)" width="1024" height="633" alt="Forum Trabzon alışveriş merkezinin girişi, akşam ışıklarıyla" loading="lazy" decoding="async"></figure>
+              <div class="ref__body"><h4 class="ref__name">Forum AVM Trabzon</h4><p class="ref__meta">Trabzon · AVM</p><p class="ref__scope">Komple mekanik tesisatlar, VRV klima sistemleri, sıhhi tesisatlar, yangın tesisatları, havalandırma tesisatları, doğalgaz tesisatları</p></div>
+            </li>
+            <li class="ref ref--l" style="--span:4" data-count="1">
+              <figure class="ref__pic"><img src="img/ref-sabirlar-1024.webp" srcset="img/ref-sabirlar-640.webp 640w, img/ref-sabirlar-1024.webp 1024w" sizes="(min-width: 64em) 34vw, (min-width: 48em) 46vw, 40vw" width="1024" height="745" alt="Sabırlar İş Merkezi’nin cam cepheli blokları" loading="lazy" decoding="async"></figure>
+              <div class="ref__body"><h4 class="ref__name">Sabırlar İş Merkezi</h4><p class="ref__meta">Trabzon · İş merkezi</p><p class="ref__scope">VRV klima sistemleri</p></div>
+            </li>
+            <li class="ref ref--l" style="--span:5; --fx:50% 60%" data-count="1">
+              <figure class="ref__pic"><img src="img/ref-byd-1024.webp" srcset="img/ref-byd-640.webp 640w, img/ref-byd-1024.webp 1024w" sizes="(min-width: 64em) 34vw, (min-width: 48em) 46vw, 40vw" width="1024" height="779" alt="BYD showroomunun cam cephesi ve önündeki araçlar" loading="lazy" decoding="async"></figure>
+              <div class="ref__body"><h4 class="ref__name">BYD Showroom</h4><p class="ref__meta">Trabzon · Showroom</p><p class="ref__scope">VRV klima sistemleri</p></div>
+            </li>
+          </ul>
+        </div>
+        <div class="rgroup" data-reveal data-group="konut" data-count="4">
+          <div class="rhead">
+            <h3 class="rhead__title">Konut</h3>
+            <p class="rhead__n">4 proje</p>
+            <p class="rhead__text">Trabzon’da üç konut projesi ve İstanbul’da Vaat Express Güneşli.</p>
+            <a class="rhead__ask" href="https://wa.me/905326067945?text=Merhaba%2C%20web%20sitenizdeki%20referans%20projelerinize%20bakt%C4%B1m.%20Benzer%20bir%20konut%20projesi%20i%C3%A7in%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum.">Benzer bir iş için WhatsApp’tan yazın</a>
+          </div>
+          <ul role="list" class="rgrid">
+            <li class="ref ref--l" style="--span:5" data-count="1">
+              <figure class="ref__pic"><img src="img/ref-kayi-1024.webp" srcset="img/ref-kayi-640.webp 640w, img/ref-kayi-1024.webp 1024w" sizes="(min-width: 64em) 34vw, (min-width: 48em) 46vw, 40vw" width="1024" height="705" alt="Kayı Trabzon Residence blokları ve havuzu, havadan" loading="lazy" decoding="async"></figure>
+              <div class="ref__body"><h4 class="ref__name">Kayı Trabzon Residence</h4><p class="ref__meta">Trabzon · Konut</p><p class="ref__scope">Komple mekanik tesisatlar, isıtma tesisatı, VRV klima tesisatı, sıhhi tesisat, yangın tesisatı, havalandırma tesisatı, doğalgaz tesisatı, havuz sistemleri</p></div>
+            </li>
+            <li class="ref ref--l" style="--span:4; --fx:50% 55%" data-count="1">
+              <figure class="ref__pic"><img src="img/ref-vaat-express-1024.webp" srcset="img/ref-vaat-express-640.webp 640w, img/ref-vaat-express-1024.webp 1024w" sizes="(min-width: 64em) 34vw, (min-width: 48em) 46vw, 40vw" width="1024" height="708" alt="Vaat Express Güneşli konut kulesi ve havuzu" loading="lazy" decoding="async"></figure>
+              <div class="ref__body"><h4 class="ref__name">Vaat Express Güneşli</h4><p class="ref__meta">İstanbul · Konut</p><p class="ref__scope">Komple mekanik tesisatlar, multi klima sistemleri, sıhhi tesisatlar, yangın tesisatları, havalandırma tesisatları</p></div>
+            </li>
+            <li class="ref ref--l" style="--span:4" data-count="1">
+              <figure class="ref__pic"><img src="img/ref-teras-3-1024.webp" srcset="img/ref-teras-3-640.webp 640w, img/ref-teras-3-1024.webp 1024w" sizes="(min-width: 64em) 34vw, (min-width: 48em) 46vw, 40vw" width="1024" height="682" alt="Teras 3 konut blokları ve havuzları, havadan" loading="lazy" decoding="async"></figure>
+              <div class="ref__body"><h4 class="ref__name">Teras 3 Konutları</h4><p class="ref__meta">Trabzon · Konut</p><p class="ref__scope">Komple mekanik tesisatlar, klima sistemleri, sıhhi tesisatlar, yangın tesisatları, havalandırma tesisatları</p></div>
+            </li>
+            <li class="ref ref--l" style="--span:5" data-count="1">
+              <figure class="ref__pic"><img src="img/ref-villa-serander-1024.webp" srcset="img/ref-villa-serander-640.webp 640w, img/ref-villa-serander-1024.webp 1024w" sizes="(min-width: 64em) 34vw, (min-width: 48em) 46vw, 40vw" width="1024" height="680" alt="Villa Serander projesinin villaları, havadan" loading="lazy" decoding="async"></figure>
+              <div class="ref__body"><h4 class="ref__name">Villa Serander</h4><p class="ref__meta">Trabzon · Villa</p><p class="ref__scope">Komple mekanik tesisatlar, multi klima sistemleri, sıhhi tesisatlar, yangın tesisatları, havalandırma tesisatları</p></div>
+            </li>
+          </ul>
+        </div>
+        <div class="refs__foot">
+          <p class="refs__credit">Görseller Hedef Isı’nın referans kataloğundan. Projenizin türünü yazın; benzer işlerin ayrıntısını keşifte konuşalım.</p>
+          <a class="button button--paper" href="https://wa.me/905326067945?text=Merhaba%2C%20web%20sitenizdeki%20referans%20projelerinize%20bakt%C4%B1m.%20Bir%20proje%20i%C3%A7in%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum.">Projeniz için WhatsApp’tan yazın</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- What we install, said once, with the things themselves in the sentence; then the two ways in -->
+    <section class="intro wrap" aria-labelledby="intro-title">
+      <h2 id="intro-title" class="sr-only">Ne yapıyoruz</h2>
+      <p class="statement" data-reveal>Bir odanın <span class="nw">kliması <span class="slot-pic"><img src="img/kelime-klima.webp" width="240" height="126" alt="Duvar tipi klimanın iç ünitesi" loading="lazy" decoding="async"></span>,</span> bir iş yerinin VRV <span class="nw">sistemi <span class="slot-pic"><img src="img/kelime-vrv.webp" width="240" height="126" alt="Çatıda sıra sıra VRV dış üniteleri" loading="lazy" decoding="async"></span>,</span> bir dairenin <span class="nw">kombisi <span class="slot-pic"><img src="img/kelime-kombi.webp" width="240" height="126" alt="Mutfak duvarında kombi" loading="lazy" decoding="async"></span></span> ve yerden <span class="nw">ısıtması <span class="slot-pic"><img src="img/kelime-yerden.webp" width="240" height="126" alt="Yerden ısıtma kollektörü" loading="lazy" decoding="async"></span>.</span> Keşfini yapar, kurar, her yıl bakımını üstleniriz.</p>
+      <div class="paths">
+        <a class="path" href="#kesif" data-path="ev" data-reveal style="--i:1">
+          <span class="path__pic path__pic--cold"><img src="img/ufak-klima.webp" width="320" height="320" alt="" loading="lazy" decoding="async"></span>
+          <span class="path__body">
+            <span class="path__title">Evim için</span>
+            <span class="path__text">Klima, kombi, ısı pompası, yerden ısıtma. Dört adımda, fotoğraflı keşif isteği.</span>
+          </span>
+          <svg class="path__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="path path--work" href="#kesif" data-path="is" data-reveal style="--i:2">
+          <span class="path__pic path__pic--ink"><img src="img/ufak-vrv.webp" width="320" height="320" alt="" loading="lazy" decoding="async"></span>
+          <span class="path__body">
+            <span class="path__title">İş yerim ve projem için</span>
+            <span class="path__text">VRV, merkezi sistem, yangın, havalandırma, komple mekanik taahhüt. Proje bilgisini ve çizimi gönderin.</span>
+          </span>
+          <svg class="path__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- THE LIVE THING: capacity calculator -->
+    <section id="hesap" class="calc wrap" aria-labelledby="calc-title">
+      <div class="calc__form">
+        <h2 id="calc-title" class="head" data-reveal>Kaç BTU, kaç kW?</h2>
+        <p class="calc__intro" data-reveal style="--i:1">Oda ve daire alanını girin. Trabzon iklimi için yaklaşık klima ve kombi kapasitesini hemen görün.</p>
+        <form id="calc" class="form" novalidate data-reveal style="--i:2">
+          <div class="area">
+            <label class="form__label" for="oda">Oda alanı</label>
+            <div class="stepper">
+              <button type="button" class="stepper__btn" data-step="-1" data-for="oda" aria-label="Oda alanını 1 m² azalt">−</button>
+              <input id="oda" name="oda" type="number" inputmode="numeric" min="5" max="150" step="1" value="20" aria-describedby="oda-unit">
+              <span id="oda-unit" class="stepper__unit">m²</span>
+              <button type="button" class="stepper__btn" data-step="1" data-for="oda" aria-label="Oda alanını 1 m² artır">+</button>
+            </div>
+          </div>
+          <fieldset class="choice">
+            <legend class="form__label">Odanın cephesi</legend>
+            <div class="choice__row">
+              <label><input type="radio" name="cephe" value="kuzey"><span>Kuzey</span></label>
+              <label><input type="radio" name="cephe" value="dogu"><span>Doğu</span></label>
+              <label><input type="radio" name="cephe" value="bati"><span>Batı</span></label>
+              <label><input type="radio" name="cephe" value="guney" checked><span>Güney</span></label>
+            </div>
+          </fieldset>
+          <fieldset class="choice">
+            <legend class="form__label">Kat</legend>
+            <div class="choice__row">
+              <label><input type="radio" name="kat" value="ara" checked><span>Ara kat</span></label>
+              <label><input type="radio" name="kat" value="zemin"><span>Zemin kat</span></label>
+              <label><input type="radio" name="kat" value="cati"><span>Çatı katı</span></label>
+            </div>
+          </fieldset>
+          <fieldset class="choice">
+            <legend class="form__label">Yalıtım</legend>
+            <div class="choice__row">
+              <label><input type="radio" name="yalitim" value="iyi"><span>İyi, mantolu</span></label>
+              <label><input type="radio" name="yalitim" value="orta" checked><span>Orta</span></label>
+              <label><input type="radio" name="yalitim" value="zayif"><span>Zayıf, yalıtımsız</span></label>
+            </div>
+          </fieldset>
+          <div class="area">
+            <label class="form__label" for="daire">Dairenin tamamı, kombi için</label>
+            <div class="stepper">
+              <button type="button" class="stepper__btn" data-step="-5" data-for="daire" aria-label="Daire alanını 5 m² azalt">−</button>
+              <input id="daire" name="daire" type="number" inputmode="numeric" min="30" max="400" step="5" value="110" aria-describedby="daire-unit">
+              <span id="daire-unit" class="stepper__unit">m²</span>
+              <button type="button" class="stepper__btn" data-step="5" data-for="daire" aria-label="Daire alanını 5 m² artır">+</button>
+            </div>
+          </div>
+          <noscript><p class="form__noscript">Hesaplayıcı tarayıcıda JavaScript ile çalışır. Kapalıysa yandaki formülle elle hesaplayabilir ya da bizi arayabilirsiniz: 0462 230 15 99.</p></noscript>
+        </form>
+      </div>
+
+      <div class="calc__out">
+        <p class="sr-only" aria-live="polite" data-out="summary"></p>
+        <div class="result">
+          <div class="result__disc result__disc--cold" data-reveal style="--i:1">
+            <p class="result__num"><span data-out="klima-size">12.000</span> <span class="result__unit">BTU</span></p>
+            <p class="result__what" data-out="klima-what">klima, bu oda için</p>
+          </div>
+          <div class="result__disc result__disc--heat" data-reveal style="--i:2">
+            <p class="result__num"><span data-out="kombi-size">20</span> <span class="result__unit">kW</span></p>
+            <p class="result__what" data-out="kombi-what">kombi, 110&nbsp;m² daire</p>
+          </div>
+        </div>
+        <div class="formula" data-reveal style="--i:3">
+          <p><span class="formula__name">Klima.</span> <span data-out="klima-formula">20 m² × 500 BTU × 1,10 güney × 1,00 ara kat × 1,00 orta yalıtım = 11.000 BTU</span>. Hesabı karşılayan en küçük standart boy önerilir: 9.000, 12.000, 18.000 ya da 24.000 BTU; boy hesaptan en fazla %5 küçük kalabilir.</p>
+          <p><span class="formula__name">Kombi.</span> <span data-out="kombi-formula">110 m² × 90 W × 1,00 ara kat × 0,95 güney = 9,4 kW ısı kaybı</span>. Kaybın %20 fazlasını karşılayan ilk yaygın boy önerilir: 20, 24, 28 ya da 35 kW. Sıcak su ihtiyacı yüzünden 20 kW’ın altına inilmez.</p>
+          <p class="formula__note">Yaklaşık; kesin değer keşifle belirlenir.</p>
+          <div class="coef">
+            <button type="button" class="coef__toggle link-plain" aria-expanded="true" aria-controls="coef-panel">Katsayıların hepsi</button>
+            <div id="coef-panel" class="coef__panel">
+            <table>
+              <caption class="sr-only">Hesapta kullanılan katsayılar</caption>
+              <thead><tr><th scope="col">Seçim</th><th scope="col">Klima çarpanı</th><th scope="col">Kombi çarpanı</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Kuzey cephe</th><td>0,90</td><td>1,10</td></tr>
+                <tr><th scope="row">Doğu cephe</th><td>1,00</td><td>1,00</td></tr>
+                <tr><th scope="row">Batı cephe</th><td>1,10</td><td>1,00</td></tr>
+                <tr><th scope="row">Güney cephe</th><td>1,10</td><td>0,95</td></tr>
+                <tr><th scope="row">Ara kat</th><td>1,00</td><td>1,00</td></tr>
+                <tr><th scope="row">Zemin kat</th><td>0,95</td><td>1,10</td></tr>
+                <tr><th scope="row">Çatı katı</th><td>1,20</td><td>1,15</td></tr>
+                <tr><th scope="row">İyi yalıtım</th><td>0,90</td><td>60 W/m²</td></tr>
+                <tr><th scope="row">Orta yalıtım</th><td>1,00</td><td>90 W/m²</td></tr>
+                <tr><th scope="row">Zayıf yalıtım</th><td>1,15</td><td>120 W/m²</td></tr>
+              </tbody>
+            </table>
+            <p class="coef__note">Klimada taban değer 500 BTU/m² (Karadeniz kıyısı). Güney cephe yazın odayı ısıtır, kışın ısı kaybını azaltır; bu yüzden iki hesapta ters yönde çalışır.</p>
+            </div>
+          </div>
+        </div>
+        <div class="calc__actions" data-reveal style="--i:4">
+          <a class="button" href="#kesif" data-path="ev" data-from-calc>Bu sonuçla keşif iste</a>
+          <a class="link-plain" id="calc-wa" href="https://wa.me/905326067945?text=Merhaba%2C%20Hedef%20Is%C4%B1%20sitesindeki%20hesaplay%C4%B1c%C4%B1yla%20bakt%C4%B1m.%0AOda%3A%2020%20m%C2%B2%2C%20g%C3%BCney%20cephe%2C%20ara%20kat%2C%20orta%20yal%C4%B1t%C4%B1m%20%E2%86%92%20yakla%C5%9F%C4%B1k%2012.000%20BTU%20klima%20(hesap%2011.000%20BTU).%0ADaire%3A%20110%20m%C2%B2%20%E2%86%92%20%C4%B1s%C4%B1%20kayb%C4%B1%20yakla%C5%9F%C4%B1k%209%2C4%20kW%2C%20%C3%B6nerilen%20kombi%2020%20kW.%0ABu%20sonu%C3%A7la%20%C3%BCcretsiz%20ke%C5%9Fif%20istiyorum.">Sonucu doğrudan WhatsApp’tan gönderin</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES: one disc, its colour is the mode of the system (cold, heat, both) -->
+    <section id="hizmetler" class="svc wrap" aria-labelledby="svc-title">
+      <div class="svc__stage" data-reveal>
+        <div class="svc__disc" data-mode="cold"></div>
+        <figure class="svc__pic shutter">
+          <img data-svc-img src="img/hizmet-klima.webp" width="960" height="960" alt="Duvar tipi klimanın iç ünitesi, yakından" loading="lazy" decoding="async">
+        </figure>
+      </div>
+      <div class="svc__list">
+        <h2 id="svc-title" class="svc__title" data-reveal>Hizmetler</h2>
+        <ul role="list" class="svc__names" data-reveal style="--i:1">
+          <li><button type="button" data-svc="klima" aria-pressed="true">Klima</button></li>
+          <li><button type="button" data-svc="vrv" aria-pressed="false">VRV sistemleri</button></li>
+          <li><button type="button" data-svc="isipompasi" aria-pressed="false">Isı pompası</button></li>
+          <li><button type="button" data-svc="kombi" aria-pressed="false">Kombi ve doğalgaz</button></li>
+          <li><button type="button" data-svc="yerden" aria-pressed="false">Yerden ısıtma</button></li>
+          <li><button type="button" data-svc="tesisat" aria-pressed="false">Yangın ve havalandırma</button></li>
+        </ul>
+      </div>
+      <div class="svc__fact" aria-live="polite" data-reveal style="--i:2">
+        <p class="svc__mode" data-svc-mode>Yazın soğutur, kışın ısıtır</p>
+        <p data-svc-text>Ev ve iş yeri için duvar tipi, multi split ve ticari klimalar. Daikin bayisi olarak satış, montaj ve bakım.</p>
+        <a class="link-plain" data-svc-link data-path="ev" data-ne="Klima" href="#kesif">Klima için keşif iste</a>
+      </div>
+    </section>
+
+    <!-- MAINTENANCE: the year as a row of dials, then the plans (contents proposed, prices left to Hedef Isı) -->
+    <section id="bakim" class="care" aria-labelledby="care-title">
+      <div class="wrap care__inner">
+        <h2 id="care-title" class="head care__title" data-reveal>Eylül’de kombi, Mayıs’ta klima</h2>
+        <p class="care__lead" data-reveal style="--i:1">Bakımlı kombi daha az gaz yakar, bakımlı klima daha temiz hava üfler. Montajını yaptığımız her cihazı listeye alır, zamanı gelince WhatsApp’tan haber veririz.</p>
+        <ol class="year" aria-label="Yıllık bakım takvimi" data-reveal style="--i:2">
+          <li data-m="1"><span class="year__dot"></span><span class="year__name">Ocak</span></li>
+          <li data-m="2"><span class="year__dot"></span><span class="year__name">Şubat</span></li>
+          <li data-m="3"><span class="year__dot"></span><span class="year__name">Mart</span></li>
+          <li data-m="4"><span class="year__dot"></span><span class="year__name">Nisan</span></li>
+          <li data-m="5" class="is-klima"><span class="year__dot"><img src="img/ufak-klima.webp" width="320" height="320" alt="Duvar tipi klimanın iç ünitesi" loading="lazy" decoding="async"></span><span class="year__name">Mayıs</span></li>
+          <li data-m="6"><span class="year__dot"></span><span class="year__name">Haziran</span></li>
+          <li data-m="7"><span class="year__dot"></span><span class="year__name">Temmuz</span></li>
+          <li data-m="8"><span class="year__dot"></span><span class="year__name">Ağustos</span></li>
+          <li data-m="9" class="is-kombi"><span class="year__dot"><img src="img/ufak-kombi.webp" width="320" height="320" alt="Mutfak duvarında kombi" loading="lazy" decoding="async"></span><span class="year__name">Eylül</span></li>
+          <li data-m="10"><span class="year__dot"></span><span class="year__name">Ekim</span></li>
+          <li data-m="11"><span class="year__dot"></span><span class="year__name">Kasım</span></li>
+          <li data-m="12"><span class="year__dot"></span><span class="year__name">Aralık</span></li>
+        </ol>
+        <div class="care__grid">
+          <div class="care__now" data-reveal style="--i:1">
+            <p class="care__today" data-care-now>Sıradaki bakım Mayıs’ta: klima. Kombinizin Eylül bakımı yapılmadıysa kış ortasından önce yaptırın.</p>
+            <a class="button button--ink" href="https://wa.me/905326067945?text=Merhaba%2C%20bak%C4%B1m%20hat%C4%B1rlatma%20listenize%20eklenmek%20istiyorum.%20Cihaz%C4%B1m%3A%20kombi%20%2F%20klima.">Hatırlatma listesine yazılın</a>
+          </div>
+          <div class="care__list care__list--klima" data-reveal style="--i:2">
+            <h3>Mayıs: klima bakımı</h3>
+            <ul role="list" class="dots">
+              <li>Filtre ve iç ünite temizliği</li>
+              <li>Dış ünite serpantin temizliği</li>
+              <li>Gaz basıncı ve drenaj kontrolü</li>
+              <li>Soğutma ve ısıtma modunda test</li>
+            </ul>
+          </div>
+          <div class="care__list care__list--kombi" data-reveal style="--i:3">
+            <h3>Eylül: kombi bakımı</h3>
+            <ul role="list" class="dots">
+              <li>Yanma ve baca gazı kontrolü</li>
+              <li>Brülör ve eşanjör temizliği</li>
+              <li>Tesisat basıncı, genleşme tankı</li>
+              <li>Gaz bağlantılarında sızdırmazlık</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="plans">
+          <h3 class="plans__title" data-reveal>Bakım planları</h3>
+          <ul role="list" class="plans__list">
+            <li class="plan" data-reveal style="--i:1">
+              <h4 class="plan__name">Tek cihaz</h4>
+              <p class="plan__for">Bir kombi ya da bir klima</p>
+              <ul role="list" class="dots plan__has">
+                <li>Yılda bir bakım ziyareti</li>
+                <li>Yukarıdaki kontrol listesinin tamamı</li>
+                <li>Bakım zamanı WhatsApp’tan hatırlatma</li>
+              </ul>
+              <p class="plan__price">Fiyat: Hedef Isı belirleyecek</p>
+              <a class="link-plain plan__ask" href="https://wa.me/905326067945?text=Merhaba%2C%20tek%20cihaz%20bak%C4%B1m%20plan%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.">Bu plan için WhatsApp’tan yazın</a>
+            </li>
+            <li class="plan plan--home" data-reveal style="--i:2">
+              <h4 class="plan__name">Ev paketi</h4>
+              <p class="plan__for">Kombi ve klimalar birlikte</p>
+              <ul role="list" class="dots plan__has">
+                <li>Yılda iki ziyaret: Mayıs’ta klima, Eylül’de kombi</li>
+                <li>Arıza olursa öncelikli randevu</li>
+                <li>Bakım zamanı WhatsApp’tan hatırlatma</li>
+              </ul>
+              <p class="plan__price">Fiyat: Hedef Isı belirleyecek</p>
+              <a class="link-plain plan__ask" href="https://wa.me/905326067945?text=Merhaba%2C%20ev%20paketi%20bak%C4%B1m%20plan%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.">Bu plan için WhatsApp’tan yazın</a>
+            </li>
+            <li class="plan plan--work" data-reveal style="--i:3">
+              <h4 class="plan__name">İş yeri sözleşmesi</h4>
+              <p class="plan__for">Otel, okul, fabrika, site yönetimi</p>
+              <ul role="list" class="dots plan__has">
+                <li>VRV, kazan dairesi ve havalandırma bakımı</li>
+                <li>Ziyaret sıklığı tesise göre belirlenir</li>
+                <li>Her ziyaretin ardından yazılı bakım raporu</li>
+              </ul>
+              <p class="plan__price">Fiyat: keşiften sonra Hedef Isı belirleyecek</p>
+              <a class="link-plain plan__ask" href="https://wa.me/905326067945?text=Merhaba%2C%20i%C5%9F%20yeri%20bak%C4%B1m%20s%C3%B6zle%C5%9Fmesi%20hakk%C4%B1nda%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum.">Sözleşme için WhatsApp’tan yazın</a>
+            </li>
+          </ul>
+          <p class="plans__note" data-reveal>Plan içerikleri öneridir; içerik ve fiyat Hedef Isı’nın onayıyla kesinleşir.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT: where they are, what they are -->
+    <section id="biz" class="about" aria-labelledby="about-title">
+      <div class="about__panel">
+        <h2 id="about-title" class="about__title" data-reveal>Sahil yolunda, Panagia’nın yanında</h2>
+        <figure class="about__pic">
+          <img src="img/city-wide.webp" width="1200" height="800" alt="Denizden görünen Trabzon kıyısı ve tepeler" loading="lazy" decoding="async">
+          <figcaption class="about__caption">Trabzon, denizden</figcaption>
+        </figure>
+        <div class="about__text">
+          <div data-reveal style="--i:1">
+            <h3>Daikin bayisi</h3>
+            <p>Daikin’in resmi bayi listesinde Trabzon’da kayıtlı; VRV PRO ve UPG Premium bayisi. Klima, kombi, mühendislik sistemleri ve hava temizleme ürünlerinde satış ve uygulama.</p>
+          </div>
+          <div data-reveal style="--i:2">
+            <h3>Mühendislik firması</h3>
+            <p>Hedef Isı Mühendislik İnşaat Sanayi Ticaret Ltd. Şti. Isıtma, soğutma, havalandırma ve yangın tesisatı; ev müşterilerinin yanı sıra proje ve taahhüt işleri.</p>
+          </div>
+          <a class="button" data-reveal style="--i:3" href="#kesif">Ücretsiz keşif iste</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SURVEY DAY: what happens, in order -->
+    <section id="kesif-gunu" class="days wrap" aria-labelledby="days-title">
+      <div class="days__head">
+        <h2 id="days-title" class="head" data-reveal>Keşif isteğinden sonra ne olur?</h2>
+        <p class="days__lead" data-reveal style="--i:1">Mesajdan bakım listesine beş adım. Evde olmanız gereken günler yalnız keşif ve montaj günleri.</p>
+      </div>
+      <ol class="days__list" data-reveal style="--i:2">
+        <li class="day day--msg"><span class="day__dot" aria-hidden="true"></span><h3 class="day__name">Mesaj</h3><p>WhatsApp’tan yazarsınız. Odanın ya da eski cihazın fotoğrafını atarsanız keşfe hazırlıklı geliriz.</p></li>
+        <li class="day day--visit"><span class="day__dot" aria-hidden="true"></span><h3 class="day__name">Keşif</h3><p>Ekibimiz gelir; odayı ölçer, cephe, kat ve yalıtıma bakar, cihazın ve boruların yerini sizinle seçer. Ücret alınmaz.</p></li>
+        <li class="day day--offer"><span class="day__dot" aria-hidden="true"></span><h3 class="day__name">Teklif</h3><p>Cihaz kapasitesi, montaj yeri ve fiyat netleşir. Karar sizindir; teklif sizi bağlamaz.</p></li>
+        <li class="day day--fit"><span class="day__dot" aria-hidden="true"></span><h3 class="day__name">Montaj</h3><p>Klimada delik, borulama, vakum ve test; kombide bağlantı ve ilk çalıştırma. Cihazı çalışırken gösterir, toparlayıp çıkarız.</p></li>
+        <li class="day day--care"><span class="day__dot" aria-hidden="true"></span><h3 class="day__name">Bakım listesi</h3><p>Cihazınız listeye girer. Mayıs’ta klima, Eylül’de kombi için WhatsApp’tan haber veririz.</p></li>
+      </ol>
+    </section>
+
+    <!-- CONTACT: the survey coupon, now with two ways in (home: photo quote, business: project form) -->
+    <section id="kesif" class="contact wrap" aria-labelledby="contact-title" data-dock-hide>
+      <div class="coupon" data-reveal>
+        <div class="coupon__left">
+          <h2 id="contact-title" class="coupon__title">Ücretsiz keşif kuponu</h2>
+          <div class="switch js-only" role="tablist" aria-label="Keşif kimin için">
+            <button type="button" role="tab" id="tab-ev" class="switch__btn" aria-selected="true" aria-controls="quote-ev" data-kind="ev">Evim için</button>
+            <button type="button" role="tab" id="tab-is" class="switch__btn" aria-selected="false" aria-controls="quote-is" tabindex="-1" data-kind="is">İş yerim ve projem için</button>
+          </div>
+          <p class="coupon__note">Dört kısa adım. Mesajınız WhatsApp’ta hazır açılır, gönder tuşuna siz basarsınız. Bilgileriniz bu sitede saklanmaz.</p>
+        </div>
+        <span class="coupon__perf" aria-hidden="true"></span>
+        <div class="coupon__right">
+          <form id="quote-ev" class="quote js-only" role="tabpanel" aria-labelledby="tab-ev" novalidate data-quote="ev">
+            <div class="quote__top">
+              <div class="quote__progress" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+              <p class="quote__count" data-count aria-live="polite">4 adımdan 1’i</p>
+            </div>
+            <fieldset class="quote__step" data-step>
+              <legend class="quote__q">Ne için keşif istiyorsunuz?</legend>
+              <div class="tiles">
+                <label class="tile"><input type="radio" name="ne" value="Klima"><span class="tile__face"><img src="img/kelime-klima.webp" width="240" height="126" alt="" loading="lazy" decoding="async"><span class="tile__name">Klima</span><span class="tile__note">Oda, salon, iş yeri</span></span></label>
+                <label class="tile"><input type="radio" name="ne" value="Kombi"><span class="tile__face"><img src="img/kelime-kombi.webp" width="240" height="126" alt="" loading="lazy" decoding="async"><span class="tile__name">Kombi</span><span class="tile__note">Yeni ya da değişim</span></span></label>
+                <label class="tile"><input type="radio" name="ne" value="Isı pompası"><span class="tile__face"><img src="img/kelime-isipompasi.webp" width="240" height="126" alt="" loading="lazy" decoding="async"><span class="tile__name">Isı pompası</span><span class="tile__note">Kombiye ek ya da yerine</span></span></label>
+              </div>
+            </fieldset>
+            <fieldset class="quote__step" data-step hidden>
+              <legend class="quote__q" data-size-q>Oda ne kadar büyük?</legend>
+              <label class="cfield"><span data-size-label>Oda alanı, m²</span><input name="m2" inputmode="numeric" maxlength="5" autocomplete="off"></label>
+              <p class="quote__hint" data-calc-hint hidden></p>
+            </fieldset>
+            <fieldset class="quote__step" data-step hidden>
+              <legend class="quote__q">Cihazın ve duvarın fotoğrafını çekin</legend>
+              <ul role="list" class="dots quote__tips">
+                <li>Eski cihaz varsa önden, etiketi okunacak şekilde</li>
+                <li>Yeni cihazın duracağı duvar, balkon ya da dolap</li>
+                <li>Kombide baca çıkışı ve altındaki borular</li>
+              </ul>
+              <p class="quote__hint">Fotoğrafları sonraki adımda açılan WhatsApp sohbetine eklersiniz.</p>
+            </fieldset>
+            <fieldset class="quote__step" data-step hidden>
+              <legend class="quote__q">Özet</legend>
+              <dl class="quote__sum" data-summary></dl>
+              <div class="quote__pair">
+                <label class="cfield"><span>Adınız, isteğe bağlı</span><input name="ad" autocomplete="name" maxlength="60"></label>
+                <label class="cfield"><span>Mahalle ya da ilçe, isteğe bağlı</span><input name="yer" autocomplete="address-level2" maxlength="60"></label>
+              </div>
+            </fieldset>
+            <p class="quote__error" role="alert" hidden></p>
+            <div class="quote__nav">
+              <button type="button" class="quote__back" data-back hidden>Geri</button>
+              <button type="button" class="quote__next" data-next>Devam</button>
+              <button type="submit" class="quote__send" data-send hidden>WhatsApp’ta gönder</button>
+            </div>
+          </form>
+
+          <form id="quote-is" class="quote js-only" role="tabpanel" aria-labelledby="tab-is" novalidate data-quote="is" hidden>
+            <div class="quote__top">
+              <div class="quote__progress" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+              <p class="quote__count" data-count aria-live="polite">4 adımdan 1’i</p>
+            </div>
+            <fieldset class="quote__step" data-step>
+              <legend class="quote__q">Nasıl bir bina?</legend>
+              <div class="opts opts--wrap">
+                <label class="opt"><input type="radio" name="tur" value="Otel"><span>Otel</span></label>
+                <label class="opt"><input type="radio" name="tur" value="Okul ya da kamu binası"><span>Okul, kamu binası</span></label>
+                <label class="opt"><input type="radio" name="tur" value="Fabrika ya da depo"><span>Fabrika, depo</span></label>
+                <label class="opt"><input type="radio" name="tur" value="Mağaza ya da ofis"><span>Mağaza, ofis</span></label>
+                <label class="opt"><input type="radio" name="tur" value="Konut projesi"><span>Konut projesi</span></label>
+                <label class="opt"><input type="radio" name="tur" value="Diğer"><span>Diğer</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="quote__step" data-step hidden>
+              <legend class="quote__q">Ne kadar büyük?</legend>
+              <div class="quote__pair">
+                <label class="cfield"><span>Kapalı alan, m²</span><input name="m2" inputmode="numeric" maxlength="7" autocomplete="off"></label>
+                <label class="cfield"><span>Kat sayısı, isteğe bağlı</span><input name="kat" inputmode="numeric" maxlength="2" autocomplete="off"></label>
+              </div>
+            </fieldset>
+            <fieldset class="quote__step" data-step hidden>
+              <legend class="quote__q">Proje ne aşamada?</legend>
+              <div class="opts opts--wrap">
+                <label class="opt"><input type="radio" name="zaman" value="Proje aşamasında"><span>Proje aşamasında</span></label>
+                <label class="opt"><input type="radio" name="zaman" value="Kaba inşaatta"><span>Kaba inşaatta</span></label>
+                <label class="opt"><input type="radio" name="zaman" value="İnce işlerde"><span>İnce işlerde</span></label>
+                <label class="opt"><input type="radio" name="zaman" value="Kullanılan bina, yenileme"><span>Kullanılan bina, yenileme</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="quote__step" data-step hidden>
+              <legend class="quote__q">Özet</legend>
+              <dl class="quote__sum" data-summary></dl>
+              <div class="quote__pair">
+                <label class="cfield"><span>Adınız, isteğe bağlı</span><input name="ad" autocomplete="name" maxlength="60"></label>
+                <label class="cfield"><span>Firma, isteğe bağlı</span><input name="firma" autocomplete="organization" maxlength="80"></label>
+              </div>
+              <p class="quote__hint">Çizimleri ya da proje dosyasını açılan WhatsApp sohbetinden gönderin.</p>
+            </fieldset>
+            <p class="quote__error" role="alert" hidden></p>
+            <div class="quote__nav">
+              <button type="button" class="quote__back" data-back hidden>Geri</button>
+              <button type="button" class="quote__next" data-next>Devam</button>
+              <button type="submit" class="quote__send" data-send hidden>WhatsApp’ta gönder</button>
+            </div>
+          </form>
+
+          <div class="quote__fallback no-js-only">
+            <p>Keşif isteği WhatsApp üzerinden gider. Tarayıcınızda JavaScript kapalıysa doğrudan yazın ya da arayın.</p>
+            <p><a class="button button--ink" href="https://wa.me/905326067945?text=Merhaba%2C%20web%20sitenizden%20%C3%BCcretsiz%20ke%C5%9Fif%20istiyorum.">WhatsApp’tan yazın</a></p>
+            <p><a class="link-plain" href="tel:+904622301599">0462 230 15 99</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact__info">
+        <div class="contact__lines">
+          <div data-reveal style="--i:1">
+            <h3>Adres</h3>
+            <p>Toklu Mah. Devlet Sahil Yolu Cad. No: 365A<br>Ortahisar / Trabzon<br>Panagia Otel’in yanı</p>
+            <a class="link-plain" href="https://www.google.com/maps/search/?api=1&amp;query=Hedef%20Is%C4%B1%20M%C3%BChendislik%2C%20Toklu%20Mah.%20Devlet%20Sahil%20Yolu%20Cad.%20No%3A365A%2C%20Ortahisar%2C%20Trabzon" target="_blank" rel="noopener">Haritada aç</a>
+          </div>
+          <div data-reveal style="--i:2">
+            <h3>Telefon</h3>
+            <p><a class="link-plain" href="tel:+904622301599">0462 230 15 99</a><br><a class="link-plain" href="tel:+905326067945">0532 606 79 45</a></p>
+            <p><a class="link-plain" href="mailto:hedefisi@daikinbayi.com">hedefisi@daikinbayi.com</a></p>
+          </div>
+          <div data-reveal style="--i:3">
+            <h3>WhatsApp</h3>
+            <p>Fotoğraf atın, cihazı ya da odayı görelim.</p>
+            <a class="button button--ink" href="https://wa.me/905326067945?text=Merhaba%2C%20web%20sitenizden%20yaz%C4%B1yorum.">WhatsApp’tan yazın</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER: a closing offer, the phone number at full width (the one thing a visitor needs last), then the facts -->
+  <footer class="foot" aria-labelledby="foot-title">
+    <div class="foot__close wrap">
+      <div class="foot__offer">
+        <h2 id="foot-title" class="foot__title">Projeniz için keşif ve teklif</h2>
+        <p class="foot__lead">Ev, iş yeri ya da şantiye: keşif ücretsiz, teklif sizi bağlamaz.</p>
+        <div class="foot__actions">
+          <a class="button" href="https://wa.me/905326067945?text=Merhaba%2C%20web%20sitenizden%20yaz%C4%B1yorum.">WhatsApp’tan yazın</a>
+          <a class="button button--paper" href="#kesif">Keşif kuponunu doldurun</a>
+        </div>
+      </div>
+      <a class="foot__phone" href="tel:+904622301599"><span class="sr-only">Arayın: </span>0462 230 15 99</a>
+    </div>
+    <div class="foot__cols wrap">
+      <nav aria-label="Sayfa içi">
+        <h3>Sayfa</h3>
+        <ul role="list">
+          <li><a class="link" href="#projeler">Referans projeler</a></li>
+          <li><a class="link" href="#hesap">Kapasite hesabı</a></li>
+          <li><a class="link" href="#hizmetler">Hizmetler</a></li>
+          <li><a class="link" href="#bakim">Bakım planları</a></li>
+          <li><a class="link" href="#kesif">Keşif kuponu</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h3>Firma</h3>
+        <p>Hedef Isı Mühendislik İnşaat Sanayi Ticaret Ltd. Şti.</p>
+        <p>Daikin VRV PRO ve UPG Premium bayisi</p>
+      </div>
+      <div>
+        <h3>İletişim</h3>
+        <p>Toklu Mah. Devlet Sahil Yolu Cad. No: 365A, Ortahisar / Trabzon</p>
+        <p><a class="link" href="tel:+904622301599">0462 230 15 99</a><br><a class="link" href="tel:+905326067945">0532 606 79 45</a></p>
+        <p><a class="link" href="mailto:hedefisi@daikinbayi.com">hedefisi@daikinbayi.com</a></p>
+        <p><a class="link" href="https://www.instagram.com/hedefisimuhendislik/" target="_blank" rel="noopener">Instagram: hedefisimuhendislik</a></p>
+      </div>
+      <div class="foot__credits">
+        <h3>Görseller</h3>
+        <p>Proje görselleri Hedef Isı’nın referans kataloğundan.</p>
+        <p>Hizmet fotoğrafları Pexels’ten, Pexels lisansıyla: NEOSiAM, tu nguyen, Jan van der Wolf, Max Vakhtbovych, Pavel Danilyuk, Jakub Zerdzicki.</p>
+        <p>Trabzon fotoğrafı Wikimedia Commons’tan, kırpılarak: <a class="link" href="https://commons.wikimedia.org/wiki/File:Trabzon_Sahil..._-_panoramio.jpg">“Trabzon Sahil… panoramio”</a>, Sinan Şahin, <a class="link" href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>.</p>
+      </div>
+    </div>
+    <div class="foot__last wrap">
+      <span class="foot__plate"><img src="img/logo-hedefisi.webp" width="440" height="132" alt="Hedef Isı Mühendislik" loading="lazy" decoding="async"></span>
+      <p>© 2026 Hedef Isı Mühendislik · Demo tasarım: Kadrajla</p>
+      <a class="button button--small button--paper" href="#top">Başa dön</a>
+    </div>
+  </footer>
+
+  <nav class="dock" aria-label="Hızlı iletişim" data-dock>
+    <a class="dock__btn" href="tel:+904622301599"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.5h2.6l1.4 4.1-2 1.5a12 12 0 0 0 6.3 6.3l1.5-2 4.1 1.4v2.6a2 2 0 0 1-2.2 2A16.8 16.8 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2Z"/></svg>Ara</a>
+    <a class="dock__btn dock__btn--wa" href="https://wa.me/905326067945?text=Merhaba%2C%20web%20sitenizden%20yaz%C4%B1yorum."><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 19.5l1.2-3.6A8 8 0 1 1 8.4 18.6Z"/></svg>WhatsApp’tan yazın</a>
+  </nav>
+
+  <script type="module" src="js/site.js"></script>
+</body>
+</html>

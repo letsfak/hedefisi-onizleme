@@ -1,0 +1,110 @@
+/* Hedef Isı v3: reference projects (the 21 jobs from their 9 Nov catalogue).
+   Ink field, one sticky label per group, an editorial bento beside it: a panorama or a pair of large
+   buildings, then pairs and triples. Photos stay rectangular and are cropped by a focal point
+   (--fx), never masked into circles. Without script every group is visible. */
+
+.refs { --focus: var(--paper); background: var(--ink); color: var(--paper); padding-block: calc(var(--section) * 0.5) calc(var(--section) * 0.55); }
+.refs__head { display: grid; gap: 1.5rem; }
+.refs__lead { max-width: 44ch; font-size: var(--step-lead); line-height: 1.3; letter-spacing: -0.015em; }
+.refs__count { display: flex; align-items: flex-end; gap: 1rem; }
+.refs__num { font-size: clamp(5.5rem, 3rem + 10vw, 11.5rem); line-height: 0.78; font-weight: 600; letter-spacing: -0.06em; color: var(--heat); font-variant-numeric: tabular-nums; }
+.refs__where { max-width: 17ch; font-weight: 500; line-height: 1.3; }
+
+/* filter: wraps instead of scrolling sideways, so every choice is visible */
+.refs__filter { margin-top: 2.75rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.chip {
+  display: inline-flex; align-items: center; gap: 0.6rem; min-height: 2.75rem; padding: 0 0.45rem 0 1.1rem;
+  border-radius: 999px; background: var(--ink-soft); color: var(--paper); font-weight: 500;
+  transition: background-color 180ms ease, color 180ms ease, transform 140ms var(--ease-out);
+}
+.chip__n { display: inline-grid; place-items: center; min-width: 1.9rem; height: 1.9rem; padding-inline: 0.35rem; border-radius: 999px; background: var(--ink-tone); font-size: var(--step-small); font-variant-numeric: tabular-nums; transition: background-color 180ms ease, color 180ms ease; }
+.chip[aria-pressed="true"] { background: var(--paper); color: var(--ink); }
+.chip[aria-pressed="true"] .chip__n { background: var(--heat); color: var(--ink); }
+.chip:active { transform: scale(0.96); }
+.chip:focus-visible { outline-color: var(--heat); }
+@media (hover: hover) and (pointer: fine) {
+  .chip[aria-pressed="false"]:hover { background: var(--ink-raise); }
+}
+
+/* a group: its label, then its buildings */
+.rgroup { margin-top: 4rem; }
+.rgroup[hidden] { display: none; }
+.rhead { display: grid; gap: 0.6rem; justify-items: start; margin-bottom: 1.75rem; }
+.rhead__title { font-size: var(--step-head); line-height: 1; letter-spacing: -0.04em; }
+.rhead__n { font-weight: 600; color: var(--heat); font-variant-numeric: tabular-nums; }
+.rhead__text { max-width: 38ch; color: var(--cold-soft); }
+.rhead__ask {
+  min-height: 2.75rem; display: inline-flex; align-items: center; font-size: var(--step-small); font-weight: 500;
+  text-decoration: underline; text-underline-offset: 0.22em; text-decoration-thickness: 0.08em; text-decoration-color: var(--heat);
+  transition: text-decoration-thickness 180ms ease, color 180ms ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .rhead__ask:hover { text-decoration-thickness: 0.18em; }
+}
+
+.rgrid { display: grid; gap: 1.5rem; }
+.ref { display: grid; align-content: start; gap: 0.9rem; min-width: 0; }
+.ref__pic { position: relative; margin: 0; overflow: hidden; aspect-ratio: 3 / 2; background: var(--ink-soft); }
+.ref__pic img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: var(--fx, 50% 50%); }
+.ref__body { display: grid; gap: 0.3rem; align-content: start; }
+.ref__name { font-size: var(--step-body); line-height: 1.2; letter-spacing: -0.01em; }
+.ref--xl .ref__name { font-size: var(--step-lead); line-height: 1.1; letter-spacing: -0.03em; }
+.ref__sub, .ref__parts { font-weight: 500; line-height: 1.3; }
+.ref__parts { display: grid; gap: 0.2rem; }
+.ref__meta { font-size: var(--step-small); font-weight: 500; color: var(--cold-soft); }
+.ref__scope { font-size: var(--step-small); max-width: 56ch; }
+
+.refs__foot { margin-top: 4.5rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem 2rem; }
+.refs__credit { max-width: 52ch; font-size: var(--step-small); color: var(--cold-soft); }
+.refs__foot .button { white-space: normal; text-align: center; padding-block: 0.6rem; }
+
+/* phone: the big ones full width, the rest as compact rows (picture left, words right) */
+@media (max-width: 47.99em) {
+  .ref:not(.ref--xl) { grid-template-columns: minmax(0, 0.42fr) minmax(0, 0.58fr); column-gap: 1rem; }
+  .ref:not(.ref--xl) .ref__pic { aspect-ratio: 4 / 3; }
+}
+
+/* tablet: two columns, the big ones across */
+@media (min-width: 48em) and (max-width: 63.99em) {
+  .rgroup { margin-top: 6rem; }
+  .rgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--gutter); row-gap: 2.5rem; }
+  .ref--xl { grid-column: 1 / -1; }
+  .ref--xl .ref__pic { aspect-ratio: 16 / 9; }
+  /* an odd last card would sit alone beside a hole: it takes the full row as picture-left, words-right */
+  .rgrid:has(> .ref--xl + .ref--xl) > .ref:not(.ref--xl):last-child:nth-child(odd),
+  .rgrid:has(> .ref--xl:first-child + .ref:not(.ref--xl)) > .ref:last-child:nth-child(even),
+  .rgrid:not(:has(> .ref--xl)) > .ref:last-child:nth-child(odd) {
+    grid-column: 1 / -1; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--gutter); align-items: start;
+  }
+}
+
+/* desktop: label in a sticky rail of 3 columns, the buildings in the other 9 */
+@media (min-width: 64em) {
+  .refs__head { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); align-items: end; }
+  .refs__head h2 { grid-column: 1 / 7; }
+  .refs__lead { grid-column: 1 / 8; grid-row: 2; }
+  .refs__count { grid-column: 9 / 13; grid-row: 1 / 3; justify-self: end; align-self: end; }
+  .rgroup { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); margin-top: 6rem; }
+  .rhead { grid-column: 1 / 4; align-self: start; position: sticky; top: 2rem; margin: 0; padding-right: 0.5rem; }
+  .rgrid { grid-column: 4 / 13; grid-template-columns: repeat(9, minmax(0, 1fr)); column-gap: var(--gutter); row-gap: 3rem; }
+  .rgrid > .ref { grid-column: span var(--span, 3); }
+  .ref__pic { aspect-ratio: auto; height: var(--h); }
+  .ref--xl { --h: clamp(21rem, 33vw, 34rem); }
+  .ref--l { --h: clamp(15rem, 21vw, 22rem); }
+  .ref--s { --h: clamp(11rem, 13.5vw, 14rem); }
+}
+
+/* entrance: the label, then the buildings one after another; nothing stays hidden without script */
+@media (prefers-reduced-motion: no-preference) {
+  .js .rgroup[data-reveal] { opacity: 1; transform: none; }
+  .js .rgroup .rhead, .js .rgroup .ref { opacity: 0; transform: translateY(24px); transition: opacity 600ms var(--ease-out), transform 800ms var(--ease-out); }
+  .js .rgroup.is-in .rhead, .js .rgroup.is-in .ref { opacity: 1; transform: none; }
+  .js .rgroup.is-in .ref:nth-child(1) { transition-delay: 80ms; }
+  .js .rgroup.is-in .ref:nth-child(2) { transition-delay: 160ms; }
+  .js .rgroup.is-in .ref:nth-child(3) { transition-delay: 240ms; }
+  .js .rgroup.is-in .ref:nth-child(4) { transition-delay: 300ms; }
+  .js .rgroup.is-in .ref:nth-child(5) { transition-delay: 360ms; }
+  .js .rgroup.is-in .ref:nth-child(n+6) { transition-delay: 420ms; }
+  .js .rgroup .ref__pic img { transform: scale(1.06); transition: transform 1400ms var(--ease-soft); }
+  .js .rgroup.is-in .ref__pic img { transform: none; }
+}
